@@ -8,7 +8,9 @@ This machine problem is designed to allow you to explore multiple aspects of sof
 + multithreading and the client-server pattern;
 + query parsing and execution.
 
-In addition to these aspects, the problem also touches upon rudimentary methods for statistical inference and learning.
+In addition to these aspects, the problem also touches upon rudimentary methods for statistical inference and learning.  
+
+We strongly encourage you to complete lab11 and lab12 before starting with this machine problem. 
 
 ### Background
 
@@ -41,7 +43,7 @@ The k-means algorithm finds k centroids within a dataset that each correspond to
 
 This [visualization](http://tech.nitoyon.com/en/blog/2013/11/07/k-means/) is a good way to understand how the algorithm works.
 
-For the k-means clustering algorithm, you should implement a method that returns a `List` of `Set`s: each `Set` representing a cluster of restaurants. You should also implement a method that converts such a `List` to JSON format as illustrated by the JSON file `voronoi.json` in the directory `visualize`.
+For the k-means clustering algorithm, you should implement a method that returns a `List` of `Set`s: each `Set` representing a cluster of restaurants. You should also implement a method that converts such a `List` to JSON format as illustrated by the JSON file `voronoi.json` in the directory `visualize`.  (The `weight` attribute in the `voronoi.json` adjusts the size of the marker in the visualization; you could set all points to the same weight in your implementation.)
 
 You can run the provided visualization method using `python` (Python 3) and the visualization is called a [Voronoi tesselation](https://en.wikipedia.org/wiki/Voronoi_diagram).
 
@@ -78,7 +80,7 @@ Consider the following feature functions for this machine problem:
 + restaurant location: latitude
 + restaurant location: longitude
 
-In this machine problem, we will use a **functional interface** to pass and return functions but we could have also considered using [lambdas that Java 8 supports](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).
+In this machine problem, we will use a **functional interface** to pass and return functions but we could have also considered using [lambdas that Java 8 supports](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).  
 
 > To pass and return functions in this machine problem, you can have classes that implement the interface `LeastSquaresRegression` which contains a single method to be implemented `lsrf`. Different implementations of the interface will allow for different functions `lsrf`.
 
@@ -167,6 +169,6 @@ You may lose up to 40% of your score for not following some of the above non-fun
 ### Hints
 
 - Use example code we have provided to implement a multi-threaded server.
-- You can use a parser generator (such as ANTLR) for parsing queries (or roll your own). But it is worth learning how to use a parser generator.
+- You can use a parser generator (such as [ANTLR] (http://www.antlr.org/)) for parsing queries (or develop your own parser). It is worth learning how to use a parser generator.
 - There are several easier tasks you can accomplish before focusing on structured queries. **Use your time wisely.**
-- When you complete this assignment, you would have implemented an approximation of a relational database. In the relational database world, a row is analogous to an instance of a datatype while a table definition is analogous to a datatype definition.
+- When you complete this assignment, you would have implemented an approximation of a relational database. In the relational database world, a table definition is analogous to a datatype definition while a row is analogous to an instance of a datatype.
